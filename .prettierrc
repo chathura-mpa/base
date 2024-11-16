@@ -1,0 +1,9 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "trailingComma": "none",
+  "printWidth": 128,
+  "importOrder": ["^(react/(.*)$)|^(react$)", "<THIRD_PARTY_MODULES>", "", "^[.]"],
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"]
+}
