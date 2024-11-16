@@ -1,0 +1,3 @@
+const Icons = {}
+
+export { Icons }

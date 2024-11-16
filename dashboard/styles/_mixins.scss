@@ -1,0 +1,60 @@
+@mixin rounded-borders($round) {
+  -webkit-border-radius: $round;
+  -moz-border-radius: $round;
+  border-radius: $round;
+}
+
+@mixin transition($time: 0.3s) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin common-container {
+  @include rounded-borders(4px);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  background-color: $white-HE;
+  padding: 18px 24px 24px 24px;
+  border: 1px solid transparent;
+  overflow: auto;
+}
+
+@mixin shadow($streanth: 0.1) {
+  -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, $streanth);
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, $streanth);
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, $streanth);
+}
+
+@mixin icon($name, $size, $color) {
+  $url: '~@/assets/Icons/#{$name}.svg';
+  width: $size;
+  height: $size;
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: $color;
+}
+
+@mixin typeface($fontSize, $fontWeight) {
+  font-family: $default-font;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+@mixin overflow-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin background-gradient {
+  background-image: linear-gradient(90deg, $base-color 0px, $shine-color 80px, $base-color 160px);
+  background-size: calc(100% + 160px);
+}

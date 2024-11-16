@@ -1,0 +1,12 @@
+.status-badge {
+  display: flex;
+  min-width: 50px;
+  max-width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.clickable {
+  cursor: pointer;
+}
